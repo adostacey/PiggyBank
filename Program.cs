@@ -11,3 +11,23 @@ Console.WriteLine($"Balance: {account1.Balance}");
 
 account1.WithDraw(50);
 Console.WriteLine($"Balance: {account1.Balance}");
+
+/*
+try
+{
+    account1.WithDraw(500);
+}
+catch (ArgumentException ex)
+{
+    Console.WriteLine(ex.Message);
+}
+*/
+
+try
+{
+    account1.WithDraw(-1);
+}
+catch (ArgumentException ex)
+{
+    Console.WriteLine(ex.Message);
+}
