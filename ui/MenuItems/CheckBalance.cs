@@ -1,13 +1,14 @@
 using PiggyBank.ui.Menu;
 
-namespace PiggyBank.ui.MenuItems;
-
-public class CheckBalance : MenuItem
+namespace PiggyBank.ui.MenuItems
 {
-    protected CheckBalance() : base("Check Balance") { }
-
-    public override void Execute()
+    public class CheckBalance : MenuItem
     {
-        Console.Write("This is your balance.");
+        public CheckBalance() : base("Check Balance") { }
+
+        public override void Execute()
+        {
+            Console.Write("This is your balance.");
+        }
     }
 }

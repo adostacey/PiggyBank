@@ -4,7 +4,7 @@ namespace PiggyBank.ui.MenuItems;
 
 public class DepositFunds : MenuItem
 {
-    protected DepositFunds() : base("Check Balance") { }
+    public DepositFunds() : base("Deposit Funds") { }
 
     public override void Execute()
     {

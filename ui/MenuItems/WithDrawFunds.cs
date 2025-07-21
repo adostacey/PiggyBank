@@ -4,7 +4,7 @@ namespace PiggyBank.ui.MenuItems;
 
 public class WithdrawFunds : MenuItem
 {
-    protected WithdrawFunds() : base("Withraw Funds") { }
+    public WithdrawFunds() : base("Withdraw Funds") { }
 
     public override void Execute()
     {
