@@ -6,8 +6,11 @@ public class WithdrawFunds : MenuItem
 {
     public WithdrawFunds() : base("Withdraw Funds") { }
 
-    public override void Execute()
+    public override void Execute(Account account)
     {
-        Console.Write("Withdraw funds");
+        GetAmount();
+        account.WithDraw(Amount);
+        Console.WriteLine($"Your account balance is: {account.Balance}");
+
     }
 }

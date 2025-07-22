@@ -4,6 +4,7 @@
 
     public class Menu
     {
+        public Account? Account { get; set; }
         private readonly List<MenuItem> _menuItems = new();
 
         public void AddMenuItem(MenuItem item)
@@ -22,7 +23,7 @@
                 {
                     Console.WriteLine($"{i + 1}. {_menuItems[i].Title}");
                 }
-                Console.WriteLine("0. Exit");
+                Console.WriteLine("\n0. Exit");
 
 
                 Console.Write("Choose an option: ");
@@ -35,7 +36,7 @@
                     if (choice > 0 && choice <= _menuItems.Count)
                     {
                         Console.Clear();
-                        _menuItems[choice].Execute();
+                        _menuItems[choice - 1].Execute(Account);
                     }
                     else
                     {
