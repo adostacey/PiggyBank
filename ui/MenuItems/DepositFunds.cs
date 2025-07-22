@@ -6,8 +6,10 @@ public class DepositFunds : MenuItem
 {
     public DepositFunds() : base("Deposit Funds") { }
 
-    public override void Execute()
+    public override void Execute(Account account)
     {
-        Console.Write("Add some funds");
+        GetAmount();
+        account.Deposit(Amount);
+        Console.Write($"Your account balance is: {account.Balance}");
     }
 }

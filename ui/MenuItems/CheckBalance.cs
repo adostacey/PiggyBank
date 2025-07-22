@@ -6,9 +6,9 @@ namespace PiggyBank.ui.MenuItems
     {
         public CheckBalance() : base("Check Balance") { }
 
-        public override void Execute()
+        public override void Execute(Account account)
         {
-            Console.Write("This is your balance.");
+            Console.Write($"Your account balance is: {account.Balance}");
         }
     }
 }
