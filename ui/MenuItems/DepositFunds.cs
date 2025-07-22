@@ -9,7 +9,14 @@ public class DepositFunds : MenuItem
     public override void Execute(Account account)
     {
         GetAmount();
-        account.Deposit(Amount);
-        Console.WriteLine($"Your account balance is: {account.Balance}");
+        try
+        {
+            account.Deposit(Amount);
+            Console.WriteLine($"Your account balance is: {account.Balance}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
     }
 }

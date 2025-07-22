@@ -9,8 +9,14 @@ public class WithdrawFunds : MenuItem
     public override void Execute(Account account)
     {
         GetAmount();
-        account.WithDraw(Amount);
-        Console.WriteLine($"Your account balance is: {account.Balance}");
-
+        try
+        {
+            account.WithDraw(Amount);
+            Console.WriteLine($"Your account balance is: {account.Balance}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
     }
 }
