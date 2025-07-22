@@ -12,11 +12,12 @@ public class WithdrawFunds : MenuItem
         try
         {
             account.WithDraw(Amount);
-            Console.WriteLine($"Your account balance is: {account.Balance}");
+            GetBalance(account);
         }
         catch (Exception ex)
         {
             Console.WriteLine(ex.Message);
+            GetBalance(account);
         }
     }
 }

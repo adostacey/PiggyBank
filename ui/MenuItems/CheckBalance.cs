@@ -8,7 +8,7 @@ namespace PiggyBank.ui.MenuItems
 
         public override void Execute(Account account)
         {
-            Console.WriteLine($"Your account balance is: {account.Balance}");
+            GetBalance(account);
         }
     }
 }

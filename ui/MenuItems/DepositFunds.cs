@@ -12,7 +12,7 @@ public class DepositFunds : MenuItem
         try
         {
             account.Deposit(Amount);
-            Console.WriteLine($"Your account balance is: {account.Balance}");
+            GetBalance(account);
         }
         catch (Exception ex)
         {

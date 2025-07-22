@@ -28,6 +28,12 @@
             }
         }
 
+        public void GetBalance(Account account)
+        {
+            string formattedString = string.Format("{0:C}", account.Balance);
+            Console.WriteLine($"Your balance is {formattedString}");
+        }
+
         public abstract void Execute(Account account);
     }
 }
