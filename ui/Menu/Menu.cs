@@ -36,7 +36,7 @@
                     if (choice > 0 && choice <= _menuItems.Count)
                     {
                         Console.Clear();
-                        _menuItems[choice].Execute(Account);
+                        _menuItems[choice - 1].Execute(Account);
                     }
                     else
                     {
