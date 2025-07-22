@@ -10,7 +10,7 @@ public class WithdrawFunds : MenuItem
     {
         GetAmount();
         account.WithDraw(Amount);
-        Console.Write($"Your account balance is: {account.Balance}");
+        Console.WriteLine($"Your account balance is: {account.Balance}");
 
     }
 }

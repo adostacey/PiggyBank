@@ -10,6 +10,6 @@ public class DepositFunds : MenuItem
     {
         GetAmount();
         account.Deposit(Amount);
-        Console.Write($"Your account balance is: {account.Balance}");
+        Console.WriteLine($"Your account balance is: {account.Balance}");
     }
 }
